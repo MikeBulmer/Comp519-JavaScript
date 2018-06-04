@@ -1,0 +1,82 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="UTF-8" />
+   <meta name="author" content="Michael Bulmer" />
+   <meta name="keywords" content="Michael,Bulmer,Dice,Game,COMP519,MSC Computer Science" />
+   <meta name="description" content="A Dice Game by Michae Bulmer for COMP519" />
+
+   <link rel="stylesheet" href="style.css" type="text/css" />
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+
+   <title> The Dice Game</title>
+</head>
+<body>
+
+    <h1 id="title"> The Dice Game</h1>
+    <div id="setup" class="content">
+        <h2>Setup Game</h2>
+        <p> Welcome to the dice game.  Enter how many dice you want to play with.
+            Choice an amount between 3 and 6.
+        </p>
+
+        <label for="numberOfDice" id="labelNumberOfDice"> Choose: <br /></label>
+        <input id="numberOfDice" name="numberOfDice" type="text" length= "1" / >
+
+        <button type="button" name="Start" id="startButton" > Play</button>
+     </div>
+
+    <div id="play" class="content">
+        <h2>Playing Game </h2>
+        <div class="round" id="score">Score:</div>
+        <div class="round" id="round">Rounds:</div>
+
+        <div class="round" id="totalScore"></div>
+        <div class="rolledDice" id='rolledDice'>
+
+            <!--  All images used are from wiki commons dice faces
+            https://commons.wikimedia.org/wiki/Category:Dice_faces
+            The images are all public domain-->
+            <div class="dice">
+                <img src="" width=50px height="50px" id=dice1 title="Public Domain Image, Wiki Commons"/>
+            </div>
+            <div class="dice">
+                <img src="" width=50px height="50px" id=dice2 title="Public Domain Image, Wiki Commons"/>
+            </div>
+            <div class="dice">
+                <img src="" width=50px height="50px" id=dice3 title="Public Domain Image, Wiki Commons"/>
+            </div>
+            <div class="dice">
+                <img src="" width=50px height="50px" id=dice4 title="Public Domain Image, Wiki Commons"/>
+            </div>
+            <div class="dice">
+                <img src="" width=50px height="50px" id=dice5 title="Public Domain Image, Wiki Commons"/>
+            </div>
+            <div class="dice">
+                <img src="images/dice1.png" width=50px height="50px" id=dice6 title="Public Domain Image, Wiki Commons"/>
+            </div>
+        </div>
+        <br />
+        <div class="buttons">
+        <button type="button" id="continueButton" > Continue </button>
+        <button type="button" id="endButton" > End </button>
+    </div>
+    </div>
+
+    <div id="end" class="content">
+        <h2>Your Score </h2>
+        <div class="endResults" id="endRound">Number of Rounds Played:</div>
+
+        <div class="endResults" id="endTotal">Total Number of Points:</div>
+
+        <div class="endResults" id="endAverage">Average points per round:</div>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+     </div>
+
+<!-- I've moved my code from here to the head as it is
+running before the page has loaded and isn't working properly -->
+
+<script src="Script.js" lang="javascript"> </script>
+</body>
+</html>
